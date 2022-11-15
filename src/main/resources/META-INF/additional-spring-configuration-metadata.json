@@ -1,0 +1,19 @@
+{
+	"properties": [
+		{
+			"name": "keycloak.server.context-path",
+			"type": "java.lang.String",
+			"description": "Context path for Keycloak's server"
+		},
+		{
+			"name": "keycloak.server.username",
+			"type": "java.lang.String",
+			"description": "Master administrator user name"
+		},
+		{
+			"name": "keycloak.server.password",
+			"type": "java.lang.String",
+			"description": "Master administrator password"
+		}
+	]
+}
