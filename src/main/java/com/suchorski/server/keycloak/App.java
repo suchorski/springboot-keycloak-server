@@ -9,12 +9,14 @@ import org.keycloak.services.managers.ApplianceBootstrap;
 import org.keycloak.services.resources.KeycloakApplication;
 import org.keycloak.services.util.JsonConfigProviderFactory;
 
+import com.suchorski.server.keycloak.providers.JsonProviderFactory;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class App extends KeycloakApplication {
 
-	static Properties properties;
+	static ServerProperties properties;
 
 	protected void loadConfig() {
 		JsonConfigProviderFactory factory = new JsonProviderFactory();

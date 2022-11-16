@@ -20,13 +20,15 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.suchorski.server.keycloak.providers.SimplePlatformProvider;
+
 import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
 public class Config {
 
-	private final Properties properties;
+	private final ServerProperties properties;
 	private final DataSource dataSource;
 
 	@Bean

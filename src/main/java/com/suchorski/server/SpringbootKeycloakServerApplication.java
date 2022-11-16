@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-import com.suchorski.server.keycloak.Properties;
+import com.suchorski.server.keycloak.ServerProperties;
 
 @SpringBootApplication(exclude = LiquibaseAutoConfiguration.class)
-@EnableConfigurationProperties(Properties.class)
+@EnableConfigurationProperties(ServerProperties.class)
 public class SpringbootKeycloakServerApplication {
 
 	public static void main(String[] args) {
