@@ -28,7 +28,7 @@ You can clone this repo and build it using the [Maven](https://maven.apache.org/
 $ git clone https://github.com/suchorski/springboot-keycloak-server
 $ cd springboot-keycloak-server
 $ mvn package
-$ java -jar target/server-2.1.0.jar
+$ java -jar target/server-2.2.0.jar
 ```
 
 # Contribution

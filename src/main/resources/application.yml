@@ -7,6 +7,7 @@ spring:
 
 keycloak:
   server:
-    contextPath: /auth
+    context-path: /auth
     username: admin
     password: admin
+    context-redirect: true

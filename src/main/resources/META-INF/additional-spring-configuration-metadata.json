@@ -1,19 +1,22 @@
-{
-	"properties": [
-		{
-			"name": "keycloak.server.context-path",
-			"type": "java.lang.String",
-			"description": "Context path for Keycloak's server"
-		},
-		{
-			"name": "keycloak.server.username",
-			"type": "java.lang.String",
-			"description": "Master administrator user name"
-		},
-		{
-			"name": "keycloak.server.password",
-			"type": "java.lang.String",
-			"description": "Master administrator password"
-		}
-	]
-}
+{"properties": [
+  {
+    "name": "keycloak.server.context-path",
+    "type": "java.lang.String",
+    "description": "Context path for Keycloak's server"
+  },
+  {
+    "name": "keycloak.server.username",
+    "type": "java.lang.String",
+    "description": "Master administrator user name"
+  },
+  {
+    "name": "keycloak.server.password",
+    "type": "java.lang.String",
+    "description": "Master administrator password"
+  },
+  {
+    "name": "keycloak.server.context-redirect",
+    "type": "java.lang.String",
+    "description": "Defines if the / redirects or not to /context'"
+  }
+]}
