@@ -6,7 +6,8 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 
 ## Features
 
-- Fully standalone Keycloak server running on embedded Tomcat
+- Fully standalone Keycloak server running on embedded Tomcat;
+- Added a custom theme with providers only login screen.
 
 ## Compatibility
 
@@ -27,7 +28,7 @@ You can clone this repo and build it using the [Maven](https://maven.apache.org/
 $ git clone https://github.com/suchorski/springboot-keycloak-server
 $ cd springboot-keycloak-server
 $ mvn package
-$ java -jar target/server-2.0.0.jar
+$ java -jar target/server-2.1.0.jar
 ```
 
 # Contribution
