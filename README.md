@@ -13,8 +13,9 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 
 | Version | Java | Keycloak | Spring Boot | RESTEasy | Infinispan |
 | - | - | - | - | - | - |
-| 1.x.x | 17 | 18.0.2 | 2.6.5 | 3.15.1.Final | 13.0.8.Final |
-| 2.x.x | 17 | 20.0.1 | 2.7.5 | 4.7.4.Final | 13.0.10.Final |
+| 1.0.0 | 17 | 18.0.2 | 2.6.5 | 3.15.1.Final | 13.0.8.Final |
+| 2.0.0 | 17 | 20.0.1 | 2.7.5 | 4.7.4.Final | 13.0.10.Final |
+| 2.2.1 | 17 | 20.0.2 | 2.7.5 | 4.7.7.Final | 14.0.2.Final |
 
 ## Configurations
 
@@ -28,7 +29,7 @@ You can clone this repo and build it using the [Maven](https://maven.apache.org/
 $ git clone https://github.com/suchorski/springboot-keycloak-server
 $ cd springboot-keycloak-server
 $ mvn package
-$ java -jar target/server-2.2.0.jar
+$ java -jar target/server-2.2.1.jar
 ```
 
 # Contribution
