@@ -16,6 +16,7 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 | 1.0.0 | 17 | 18.0.2 | 2.6.5 | 3.15.1.Final | 13.0.8.Final |
 | 2.0.0 | 17 | 20.0.1 | 2.7.5 | 4.7.4.Final | 13.0.10.Final |
 | 2.2.1 | 17 | 20.0.2 | 2.7.5 | 4.7.7.Final | 14.0.2.Final |
+| 2.2.2 | 17 | 20.0.3 | 2.7.7 | 4.7.7.Final | 14.0.4.Final |
 
 ## Configurations
 
