@@ -20,7 +20,7 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 
 ## Configurations
 
-You can customize the server by changing the `application.yam` file inside `resources` folder.
+You can customize the server by changing the `application.yml` file inside `resources` folder.
 
 ## Building
 
