@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import org.keycloak.Config.Scope;
+import org.keycloak.common.Profile;
+import org.keycloak.common.profile.PropertiesFileProfileConfigResolver;
+import org.keycloak.common.profile.PropertiesProfileConfigResolver;
 import org.keycloak.platform.PlatformProvider;
 
 import lombok.extern.slf4j.Slf4j;
@@ -14,13 +17,25 @@ public class SimplePlatformProvider implements PlatformProvider {
 
 	private File tmpDir;
 
+	public SimplePlatformProvider() {
+		Profile.configure(
+				new PropertiesProfileConfigResolver(System.getProperties()),
+				new PropertiesFileProfileConfigResolver());
+	}
+
+	@Override
+	public String name() {
+		return "springboot-keycloak-server";
+	}
+
 	@Override
 	public void onStartup(Runnable startupHook) {
 		startupHook.run();
 	}
 
 	@Override
-	public void onShutdown(Runnable shutdownHook) {}
+	public void onShutdown(Runnable shutdownHook) {
+	}
 
 	@Override
 	public void exit(Throwable cause) {
