@@ -19,6 +19,7 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 | 2.2.4 | 17 | 20.0.5 | 2.7.9 | 4.7.7.Final | 14.0.6.Final | Unused |
 | 3.0.0 | 17 | 21.0.0 | 2.7.9 | 4.7.7.Final | 14.0.6.Final | 4.16.1 |
 | 3.0.2 | 17 | 21.0.2 | 2.7.9 | 4.7.7.Final | 14.0.6.Final | 4.16.1 |
+| 3.1.0 | 17 | 21.1.1 | 2.7.11 | 4.7.7.Final | 14.0.8.Final | 4.20.0 |
 
 * Removed older versions from compatibility table keeping last 2 major version. For olders, check the [tags](https://github.com/suchorski/springboot-keycloak-server/tags) section.
 
@@ -34,7 +35,7 @@ You can clone this repo and build it using the [Maven](https://maven.apache.org/
 $ git clone https://github.com/suchorski/springboot-keycloak-server
 $ cd springboot-keycloak-server
 $ mvn package
-$ java -jar target/server-3.0.2.jar
+$ java -jar target/server-3.1.0.jar
 ```
 
 # Contribution
