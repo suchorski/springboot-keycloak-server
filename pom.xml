@@ -17,10 +17,10 @@
 	<properties>
 		<java.version>17</java.version>
 		<keycloak.version>21.1.1</keycloak.version>
-		<infinispan.version>14.0.6.Final</infinispan.version>
+		<infinispan.version>14.0.8.Final</infinispan.version>
 		<resteasy.version>4.7.7.Final</resteasy.version>
 		<micrometer.version>1.10.3</micrometer.version>
-		<liquibase.version>4.16.1</liquibase.version>
+		<liquibase.version>4.20.0</liquibase.version>
 		<snakeyaml.version>2.0</snakeyaml.version>
 	</properties>
 	<dependencies>
