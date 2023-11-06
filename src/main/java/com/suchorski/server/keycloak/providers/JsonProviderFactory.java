@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.keycloak.common.util.Resteasy;
 import org.keycloak.common.util.SystemEnvProperties;

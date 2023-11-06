@@ -1,6 +1,11 @@
 spring:
   jpa:
     defer-datasource-initialization: true
+    properties:
+      hibernate:
+        transaction:
+          jta:
+            platform: org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform
   datasource:
     username: sa
     url: jdbc:h2:file:./keycloak;DB_CLOSE_ON_EXIT=FALSE
@@ -11,3 +16,7 @@ keycloak:
     username: admin
     password: admin
     context-redirect: true
+
+logging:
+  level:
+    root: ERROR

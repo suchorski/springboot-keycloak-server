@@ -21,6 +21,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.suchorski.server.keycloak.providers.SimplePlatformProvider;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import lombok.RequiredArgsConstructor;
 
@@ -31,17 +33,26 @@ public class Config {
 	private final ServerProperties properties;
 	private final DataSource dataSource;
 
+        @Bean
+	@ConditionalOnMissingBean(name = "springBootPlatform")
+	protected SimplePlatformProvider springBootPlatform() {
+		return (SimplePlatformProvider) Platform.getPlatform();
+	}
+        
 	@Bean
-	ServletRegistrationBean<HttpServlet30Dispatcher> keycloakJaxRsApplication() throws Exception {
-		mockJndiEnvironment();
+	ServletRegistrationBean<HttpServlet30Dispatcher> keycloakJaxRsApplication() {            
+            try {
+                mockJndiEnvironment();
+            } catch (NamingException ex) {
+                Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+            }
 		App.properties = properties;
 		final var servlet = new ServletRegistrationBean<HttpServlet30Dispatcher>(new HttpServlet30Dispatcher());
-		servlet.addInitParameter("javax.ws.rs.Application", App.class.getName());
-		servlet.addInitParameter(ResteasyContextParameters.RESTEASY_SERVLET_MAPPING_PREFIX,
-		        properties.contextPath());
+		servlet.addInitParameter("jakarta.ws.rs.Application", App.class.getName());
+		servlet.addInitParameter(ResteasyContextParameters.RESTEASY_SERVLET_MAPPING_PREFIX, properties.contextPath());
 		servlet.addInitParameter(ResteasyContextParameters.RESTEASY_USE_CONTAINER_FORM_PARAMS, "true");
 		servlet.addUrlMappings(properties.contextPath() + "/*");
-		servlet.setLoadOnStartup(1);
+		servlet.setLoadOnStartup(2);
 		servlet.setAsyncSupported(true);
 		return servlet;
 	}
@@ -87,9 +98,4 @@ public class Config {
 		return Executors.newFixedThreadPool(5);
 	}
 
-	@Bean
-	@ConditionalOnMissingBean(name = "springBootPlatform")
-	protected SimplePlatformProvider springBootPlatform() {
-		return (SimplePlatformProvider) Platform.getPlatform();
-	}
 }
