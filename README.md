@@ -16,7 +16,7 @@ _Based on this post from [Baeldung](https://www.baeldung.com/keycloak-embedded-i
 | 3.0.0 | 17 | 21.0.0 | 2.7.9 | 4.7.7.Final | 14.0.6.Final | 4.16.1 |
 | 3.0.2 | 17 | 21.0.2 | 2.7.9 | 4.7.7.Final | 14.0.6.Final | 4.16.1 |
 | 3.1.0 | 17 | 21.1.1 | 2.7.11 | 4.7.7.Final | 14.0.8.Final | 4.20.0 |
-| 4.0.0 | 17 | 22.0.5 | 3.1.15 | 6.2.4.Final | 14.0.19.Final | 4.23.2 |
+| 4.0.0 | 17 | 22.0.5 | 3.1.5 | 6.2.4.Final | 14.0.19.Final | 4.23.2 |
 
 * Removed older versions from compatibility table keeping last 2 major version. For olders, check the [tags](https://github.com/suchorski/springboot-keycloak-server/tags) section.
 
