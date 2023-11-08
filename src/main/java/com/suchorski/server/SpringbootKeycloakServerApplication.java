@@ -6,14 +6,12 @@ import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfigurati
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import com.suchorski.server.keycloak.ServerProperties;
-import org.jboss.resteasy.core.ResteasyDeploymentImpl;
 
 @SpringBootApplication(exclude = LiquibaseAutoConfiguration.class)
 @EnableConfigurationProperties(ServerProperties.class)
 public class SpringbootKeycloakServerApplication {
 
 	public static void main(String[] args) {
-            ResteasyDeploymentImpl ha;
 		SpringApplication.run(SpringbootKeycloakServerApplication.class, args);
 	}
 
