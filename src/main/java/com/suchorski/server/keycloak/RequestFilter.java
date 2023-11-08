@@ -16,7 +16,7 @@ public class RequestFilter extends AbstractRequestFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-	        throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		servletRequest.setCharacterEncoding(StandardCharsets.UTF_8.name());
 		final var clientConnection = createConnection((HttpServletRequest) servletRequest);
 		filter(clientConnection, (session) -> {

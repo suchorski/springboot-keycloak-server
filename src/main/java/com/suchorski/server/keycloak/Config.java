@@ -33,19 +33,19 @@ public class Config {
 	private final ServerProperties properties;
 	private final DataSource dataSource;
 
-        @Bean
+	@Bean
 	@ConditionalOnMissingBean(name = "springBootPlatform")
 	protected SimplePlatformProvider springBootPlatform() {
 		return (SimplePlatformProvider) Platform.getPlatform();
 	}
-        
+
 	@Bean
-	ServletRegistrationBean<HttpServlet30Dispatcher> keycloakJaxRsApplication() {            
-            try {
-                mockJndiEnvironment();
-            } catch (NamingException ex) {
-                Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
-            }
+	ServletRegistrationBean<HttpServlet30Dispatcher> keycloakJaxRsApplication() {
+		try {
+			mockJndiEnvironment();
+		} catch (NamingException ex) {
+			Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+		}
 		App.properties = properties;
 		final var servlet = new ServletRegistrationBean<HttpServlet30Dispatcher>(new HttpServlet30Dispatcher());
 		servlet.addInitParameter("jakarta.ws.rs.Application", App.class.getName());
@@ -89,7 +89,8 @@ public class Config {
 			}
 
 			@Override
-			public void close() {}
+			public void close() {
+			}
 		});
 	}
 

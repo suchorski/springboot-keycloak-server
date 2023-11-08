@@ -30,7 +30,8 @@ public class JsonProviderFactory extends JsonConfigProviderFactory {
 				final var jsonObj = JsonSerialization.mapper.readTree(propertyOverrides);
 				jsonObj.fields().forEachRemaining(e -> propertyOverridesMap.put(e.getKey(), e.getValue().asText()));
 			}
-		} catch (IOException e) {}
+		} catch (IOException e) {
+		}
 		return propertyOverridesMap;
 	}
 
