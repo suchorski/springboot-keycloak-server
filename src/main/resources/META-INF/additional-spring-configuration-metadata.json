@@ -19,4 +19,5 @@
     "type": "java.lang.String",
     "description": "Defines if the / redirects or not to /context'"
   }
-]}
+]
+    }

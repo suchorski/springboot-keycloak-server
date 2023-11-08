@@ -10,14 +10,17 @@ import org.keycloak.services.resources.KeycloakApplication;
 import org.keycloak.services.util.JsonConfigProviderFactory;
 
 import com.suchorski.server.keycloak.providers.JsonProviderFactory;
+import jakarta.ws.rs.ApplicationPath;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@ApplicationPath("/")
 public class App extends KeycloakApplication {
 
-	static ServerProperties properties;
-
+    static ServerProperties properties;
+        
+        @Override
 	protected void loadConfig() {
 		JsonConfigProviderFactory factory = new JsonProviderFactory();
 		Config.init(factory.create().orElseThrow(() -> new NoSuchElementException("No value present")));
@@ -31,17 +34,16 @@ public class App extends KeycloakApplication {
 	}
 
 	private void createMasterRealmAdminUser() {
-		KeycloakSession session = getSessionFactory().create();
-		ApplianceBootstrap applianceBootstrap = new ApplianceBootstrap(session);
-		try {
-			session.getTransactionManager().begin();
-			applianceBootstrap.createMasterRealmUser(properties.username(), properties.password());
-			session.getTransactionManager().commit();
-		} catch (Exception ex) {
-			log.warn("Couldn't create keycloak master admin user: {}", ex.getMessage());
-			session.getTransactionManager().rollback();
-		}
-		session.close();
-	}
+		try (KeycloakSession session = getSessionFactory().create()) {
+                    ApplianceBootstrap applianceBootstrap = new ApplianceBootstrap(session);
+                    try {
+                        session.getTransactionManager().begin();
+                        applianceBootstrap.createMasterRealmUser(properties.username(), properties.password());
+                        session.getTransactionManager().commit();
+                    } catch (Exception ex) {
+                        log.warn("Couldn't create keycloak master admin user: {}", ex.getMessage());
+                        session.getTransactionManager().rollback();
+                    }
+		}	}
 
 }
