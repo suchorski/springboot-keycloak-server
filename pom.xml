@@ -6,18 +6,18 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.5</version>
+		<version>3.2.0</version>
 		<relativePath />
 	</parent>
 	<groupId>com.suchorski</groupId>
 	<artifactId>server</artifactId>
-	<version>4.0.0</version>
+	<version>5.0.0</version>
 	<name>springboot-keycloak-server</name>
 	<description>Embeded Keycloak on Spring Boot Server</description>
 	<properties>
 		<java.version>17</java.version>
-		<keycloak.version>22.0.5</keycloak.version>
-		<infinispan.version>14.0.19.Final</infinispan.version>
+		<keycloak.version>23.0.3</keycloak.version>
+		<infinispan.version>14.0.21.Final</infinispan.version>
 		<resteasy.version>6.2.4.Final</resteasy.version>
 		<micrometer.version>1.10.3</micrometer.version>
 		<liquibase.version>4.23.2</liquibase.version>
