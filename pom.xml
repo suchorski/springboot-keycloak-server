@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.suchorski</groupId>
 	<artifactId>server</artifactId>
-	<version>5.0.0</version>
+	<version>5.0.1</version>
 	<name>springboot-keycloak-server</name>
 	<description>Embeded Keycloak on Spring Boot Server</description>
 	<properties>
